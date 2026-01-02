@@ -1,0 +1,395 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #fdfdfd; }
+
+.navbar {
+    height: 90px; background: #F0F0F0; display: flex; 
+    justify-content: space-between; align-items: center;
+    padding: 0 40px; box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+    position: sticky; top: 0; z-index: 1000;
+}
+.logo { height: 45px; }
+.nav-right { display: flex; align-items: center; gap: 15px; }
+.icon-circle {
+    width: 35px; height: 35px; background: #0029FF;
+    border-radius: 50%; display: flex; justify-content: center;
+    align-items: center; color: white; cursor: pointer;
+}
+
+.sidebar-container {
+    width: 132px; height: 100vh; background: white;
+    position: fixed; left: 0; transition: 0.4s ease;
+    overflow: hidden; box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+    border-radius: 0 20px 20px 0; z-index: 999;
+}
+.sidebar-container.expanded { width: 390px; }
+.sidebar-header { background: black; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.header-text { display: none; font-size: 16px; }
+.sidebar-container.expanded .header-text { display: block; }
+.sidebar-content { padding: 20px; display: none; }
+.sidebar-container.expanded .sidebar-content { display: block; }
+
+.main-body { margin-left: 150px; padding: 40px; transition: 0.4s; }
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.title-text { color: #0029FF; font-weight: 600; }
+.submit-button { background: #0029FF; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.intro-box { background: #F4F4F4; padding: 20px; border-radius: 10px; margin-top: 25px; }
+
+.assets-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 40px; }
+.content-area { background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+.asset-header { background: black; color: white; padding: 12px; text-align: center; border-radius: 15px 15px 0 0; position: relative; }
+.asset-header i { position: absolute; right: 15px; top: 15px; color: white; }
+
+.description-section { padding: 0; border-top: 1px solid #eee; }
+.description-header { background: #F2F2F2; padding: 10px 15px; cursor: pointer; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.description-text { display: none; padding: 15px; font-size: 14px; line-height: 1.6; }
+.is-open .description-text { display: block; }
+
+.floating-icons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; }
+.f-icon { width: 60px; height: 60px; border-radius: 50%; background: #0029FF; color: white; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 20px; } */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fdfdfd;
+}
+.navbar {
+  height: 90px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  height: 45px;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icon-circle {
+  width: 35px;
+  height: 35px;
+  background: #0029ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+.sidebar-container {
+  width: 132px;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  left: 0;
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 20px 20px 0;
+  z-index: 999;
+}
+.sidebar-container.expanded {
+  width: 390px;
+}
+.sidebar-header {
+  background: black;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-text {
+  display: none;
+}
+.sidebar-container.expanded .header-text {
+  display: block;
+}
+.sidebar-content {
+  padding: 20px;
+  display: none;
+}
+.sidebar-container.expanded .sidebar-content {
+  display: block;
+}
+.main-body {
+  margin-left: 150px;
+  padding: 40px;
+  transition: 0.4s;
+}
+.title-text {
+  color: #0029ff;
+}
+.submit-button {
+  background: #0029ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.intro-box {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.content-area {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+.asset-header {
+  background: black;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+.description-section {
+  border-top: 1px solid #eee;
+}
+.description-header {
+  background: #f2f2f2;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.description-text {
+  display: none;
+  padding: 15px;
+  font-size: 14px;
+}
+.is-open .description-text {
+  display: block;
+}
+.floating-icons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.f-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #0029ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* updated jismai notice board hai */
+
+/* Existing styles... */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fdfdfd;
+  overflow-x: hidden;
+}
+
+/* Navbar stays same */
+.navbar {
+  height: 90px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  height: 45px;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icon-circle {
+  width: 35px;
+  height: 35px;
+  background: #0029ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+/* Notice Board Styling */
+.notice-board {
+  position: fixed;
+  right: 0;
+  top: 120px;
+  width: 84px;
+  height: 400px;
+  background: white;
+  border: 1px solid #cfcfcf;
+  border-radius: 30px 0 0 30px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+}
+.notice-title {
+  background: black;
+  color: white;
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 52px;
+
+}
+
+.notice-board .crossIcon{
+    margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* .notice-title i {
+  margin-bottom: 20px;
+  cursor: pointer;
+} */
+
+/* Rest of the layout */
+.main-body {
+  margin-left: 150px;
+  margin-right: 70px;
+  padding: 40px;
+  transition: 0.4s;
+}
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.content-area {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.asset-header {
+  background: black;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+.asset-header i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Threadbuild & Editor styles */
+textarea,
+input {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Floating Icons */
+.floating-icons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.f-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #0029ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar stays same as before... */
+.sidebar-container {
+  width: 132px;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  left: 0;
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 20px 20px 0;
+  z-index: 999;
+}
+.sidebar-container.expanded {
+  width: 390px;
+}
+.sidebar-header {
+  background: black;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
