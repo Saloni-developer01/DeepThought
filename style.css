@@ -474,7 +474,7 @@ input {
     right: -340px; /* Hidden state */
     top: 90px;
     width: 400px;
-    height: 400px;
+    height: 450px;
     background: white;
     border: 1px solid #D1D1D1;
     border-radius: 30px 0 0 30px;
@@ -488,13 +488,13 @@ input {
     background: black;
     color: white;
     width: 50px; /* Figma standard width for side strip */
-    height: 110%;
+    height: 95.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     cursor: pointer;
-    border-radius: 30px 0 0 0; /* Top-left curve only */
+    border-radius: 30px 0 0 30px; /* Top-left curve only */
 }
 
 .notice-title span {
