@@ -1,74 +1,16 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #fdfdfd; }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-.navbar {
-    height: 90px; background: #F0F0F0; display: flex; 
-    justify-content: space-between; align-items: center;
-    padding: 0 40px; box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
-    position: sticky; top: 0; z-index: 1000;
-}
-.logo { height: 45px; }
-.nav-right { display: flex; align-items: center; gap: 15px; }
-.icon-circle {
-    width: 35px; height: 35px; background: #0029FF;
-    border-radius: 50%; display: flex; justify-content: center;
-    align-items: center; color: white; cursor: pointer;
-}
 
-.sidebar-container {
-    width: 132px; height: 100vh; background: white;
-    position: fixed; left: 0; transition: 0.4s ease;
-    overflow: hidden; box-shadow: 4px 0 10px rgba(0,0,0,0.1);
-    border-radius: 0 20px 20px 0; z-index: 999;
-}
-.sidebar-container.expanded { width: 390px; }
-.sidebar-header { background: black; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
-.header-text { display: none; font-size: 16px; }
-.sidebar-container.expanded .header-text { display: block; }
-.sidebar-content { padding: 20px; display: none; }
-.sidebar-container.expanded .sidebar-content { display: block; }
 
-.main-body { margin-left: 150px; padding: 40px; transition: 0.4s; }
-.header-container { display: flex; justify-content: space-between; align-items: center; }
-.title-text { color: #0029FF; font-weight: 600; }
-.submit-button { background: #0029FF; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: 600; }
-.intro-box { background: #F4F4F4; padding: 20px; border-radius: 10px; margin-top: 25px; }
-
-.assets-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 40px; }
-.content-area { background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; }
-.asset-header { background: black; color: white; padding: 12px; text-align: center; border-radius: 15px 15px 0 0; position: relative; }
-.asset-header i { position: absolute; right: 15px; top: 15px; color: white; }
-
-.description-section { padding: 0; border-top: 1px solid #eee; }
-.description-header { background: #F2F2F2; padding: 10px 15px; cursor: pointer; display: flex; align-items: center; gap: 10px; font-weight: 600; }
-.description-text { display: none; padding: 15px; font-size: 14px; line-height: 1.6; }
-.is-open .description-text { display: block; }
-
-.floating-icons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; }
-.f-icon { width: 60px; height: 60px; border-radius: 50%; background: #0029FF; color: white; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 20px; } */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: #fdfdfd;
+  overflow-x: hidden;
 }
-.navbar {
-  height: 90px;
-  background: #f0f0f0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.logo {
-  height: 45px;
-}
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -85,21 +27,7 @@ body {
   color: white;
   cursor: pointer;
 }
-.sidebar-container {
-  width: 132px;
-  height: 100vh;
-  background: white;
-  position: fixed;
-  left: 0;
-  transition: 0.4s;
-  overflow: hidden;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 20px 20px 0;
-  z-index: 999;
-}
-.sidebar-container.expanded {
-  width: 390px;
-}
+
 .sidebar-header {
   background: black;
   color: white;
@@ -121,103 +49,30 @@ body {
 .sidebar-container.expanded .sidebar-content {
   display: block;
 }
-.main-body {
-  margin-left: 150px;
-  padding: 40px;
-  transition: 0.4s;
-}
+
+
 .title-text {
   color: #0029ff;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 2%;
 }
+
 .submit-button {
-  background: #0029ff;
+  background: rgba(0, 41, 255, 1);
   color: white;
   border: none;
   padding: 12px 25px;
+
+  opacity: 1;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: 600;
-}
-.intro-box {
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 25px 0;
-}
-.assets-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-.content-area {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-}
-.asset-header {
-  background: black;
-  color: white;
-  padding: 12px;
-  text-align: center;
-  border-radius: 15px 15px 0 0;
-  position: relative;
-}
-.description-section {
-  border-top: 1px solid #eee;
-}
-.description-header {
-  background: #f2f2f2;
-  padding: 10px 15px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-}
-.description-text {
-  display: none;
-  padding: 15px;
-  font-size: 14px;
-}
-.is-open .description-text {
-  display: block;
-}
-.floating-icons {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.f-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #0029ff;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
-/* updated jismai notice board hai */
 
-/* Existing styles... */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: #fdfdfd;
-  overflow-x: hidden;
-}
-
-/* Navbar stays same */
 .navbar {
   height: 90px;
   background: #f0f0f0;
@@ -225,13 +80,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.178);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 .logo {
   height: 45px;
+  margin-left: 20px;
 }
 .nav-right {
   display: flex;
@@ -239,9 +95,9 @@ body {
   gap: 15px;
 }
 .icon-circle {
-  width: 35px;
-  height: 35px;
-  background: #0029ff;
+  width: 30px;
+  height: 32.37px;
+  background: #3683f0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -279,80 +135,78 @@ body {
 
 } */
 
-
-
 /* Notice Board Base Styling */
 .notice-board {
-    position: fixed;
-    right: -340px; /* Shuru mein sirf black strip dikhegi (400px width - 60px strip) */
-    top: 90px;
-    width: 400px; /* Total width jab khulega */
-    height: 400px;
-    background: white;
-    border: 1px solid #D1D1D1;
-    border-radius: 30px 0 0 30px;
-    box-shadow: -4px 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-    display: flex;
-    transition: 0.4s ease; /* Smooth sliding effect */
+  position: fixed;
+  right: -320px; /* Shuru mein sirf black strip dikhegi (400px width - 60px strip) */
+  top: 90px;
+  width: 400px; /* Total width jab khulega */
+  height: 400px;
+  background: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 30px 0 0 30px;
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  transition: 0.4s ease; /* Smooth sliding effect */
 }
 
 /* Jab Notice Board khulega */
 .notice-board.expanded {
-    right: 0;
+  right: 0;
 }
 
 .notice-title {
-    background: black;
-    color: white;
-    width: 60px; /* Width as per your design */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Saari cheezein horizontally center karega */
-    justify-content: flex-start;
-    padding-top: 20px;
-    cursor: pointer;
-    border-radius: 30px 0 0 30px;
+  background: black;
+  color: white;
+  width: 60px; /* Width as per your design */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Saari cheezein horizontally center karega */
+  justify-content: flex-start;
+  padding-top: 20px;
+  cursor: pointer;
+  border-radius: 30px 0 0 30px;
 }
 
 /* Close Icon ki alignment */
 .crossIcon {
-    margin-bottom: 15px; /* N aur Icon ke beech gap */
-    display: block;
+  margin-bottom: 15px; /* N aur Icon ke beech gap */
+  display: block;
 }
 
 /* Text letters ki alignment */
 .notice-title span {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Letters ko center line mein layega */
-    font-weight: 500;
-    line-height: 1.5; /* Letters ke beech gap badhane ke liye */
-    letter-spacing: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Letters ko center line mein layega */
+  font-weight: 500;
+  line-height: 1.5; /* Letters ke beech gap badhane ke liye */
+  letter-spacing: normal;
 }
 
 .notice-content {
-    flex: 1;
-    display: none; /* Default mein chhupa rahega */
+  flex: 1;
+  display: none; /* Default mein chhupa rahega */
 }
 
 .notice-board.expanded .notice-content {
-    display: block; /* Expand hone par dikhega */
+  display: block; /* Expand hone par dikhega */
 }
 
 .crossIcon {
-    margin-bottom: 20px;
-    transition: 0.3s;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
 
 /* Expand hone par cross icon ko rotate kar sakte hain */
 .notice-board.expanded .crossIcon {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.notice-board .crossIcon{
-    margin-bottom: 20px;
+.notice-board .crossIcon {
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -363,9 +217,9 @@ body {
 
 /* Rest of the layout */
 .main-body {
-  margin-left: 150px;
-  margin-right: 70px;
-  padding: 40px;
+  margin-left: 140px;
+  margin-right: 108px;
+  padding: 20px;
   transition: 0.4s;
 }
 .assets-grid {
@@ -376,31 +230,32 @@ body {
 .content-area {
   background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  box-shadow: 0px -8px 4px -4px rgba(0, 0, 0, 0.247),
+    /* Top Shadow (Negative value) */ 0px 8px 6px -4px rgba(0, 0, 0, 0.274); /* Bottom Shadow (Positive value) */
   border: 1px solid #ddd;
   overflow: hidden;
+  height: 630px;
 }
 .asset-header {
-  background: black;
-  color: white;
-  padding: 12px;
+  background: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 16px;
   text-align: center;
   position: relative;
   font-weight: 600;
+  letter-spacing: 1.1;
 }
-.asset-header i {
+.asset-header svg {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 25px;
+  top: 18px;
   background: white;
   color: black;
   border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 22px;
+  height: 22px;
+  font-size: 16px;
 }
 
 /* Threadbuild & Editor styles */
@@ -437,15 +292,15 @@ input {
 
 /* Sidebar stays same as before... */
 .sidebar-container {
-  width: 132px;
-  height: 100vh;
+  width: 110px;
+  height: 71vh;
   background: white;
   position: fixed;
   left: 0;
   transition: 0.4s;
   overflow: hidden;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 20px 20px 0;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.219);
+  border-radius: 0 20px 20px 20px;
   z-index: 999;
 }
 .sidebar-container.expanded {
@@ -466,47 +321,98 @@ input {
   align-items: center;
 }
 
-
-
-
 .notice-board {
-    position: fixed;
-    right: -340px; /* Hidden state */
-    top: 90px;
-    width: 400px;
-    height: 450px;
-    background: white;
-    border: 1px solid #D1D1D1;
-    border-radius: 30px 0 0 30px;
-    box-shadow: -4px 4px 8px rgba(0,0,0,0.15); /* Slightly deeper shadow */
-    z-index: 1000;
-    display: flex;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
+  position: fixed;
+  right: -340px; /* Hidden state */
+  top: 90px;
+  width: 400px;
+  height: 450px;
+  background: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 30px 0 0 30px;
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+  z-index: 1000;
+  display: flex;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
 }
 
 .notice-title {
-    background: black;
-    color: white;
-    width: 50px; /* Figma standard width for side strip */
-    height: 95.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    cursor: pointer;
-    border-radius: 30px 0 0 30px; /* Top-left curve only */
+  background: black;
+  color: white;
+  width: 50px; /* Figma standard width for side strip */
+  height: 95.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  cursor: pointer;
+  border-radius: 30px 0 0 30px; /* Top-left curve only */
 }
 
 .notice-title span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 2; /* Vertical letters ke beech clean space */
-    text-align: center;
-    margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2; /* Vertical letters ke beech clean space */
+  text-align: center;
+  margin-top: 10px;
 }
 
 .crossIcon {
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.notification-badge {
+  background: #ff2c55;
+}
+
+.menu-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ProfilePic {
+  width: 38px;
+  height: 33px;
+  opacity: 1;
+  top: 28px;
+  left: 1291px;
+  border-radius: 250px;
+}
+
+/* Container ko relative rakho */
+.notification-icon {
+  position: relative;
+  /* display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; 
+    height: 35px;
+    background-color: #3683F0; 
+    border-radius: 50%;
+    color: white; */
+}
+
+/* Red Dot styling */
+.notification-badge {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  background-color: #ff2c55; /* Red color */
+  border-radius: 50%;
+}
+
+.toggle-btn {
+  width: 33px;
+  height: 33px;
+  margin-left: 23px;
+  border-radius: 100%;
+}
+
+.toggle-btn i {
+  font-size: 20px;
 }
