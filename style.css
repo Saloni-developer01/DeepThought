@@ -465,3 +465,48 @@ input {
   justify-content: space-between;
   align-items: center;
 }
+
+
+
+
+.notice-board {
+    position: fixed;
+    right: -340px; /* Hidden state */
+    top: 90px;
+    width: 400px;
+    height: 400px;
+    background: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 30px 0 0 30px;
+    box-shadow: -4px 4px 8px rgba(0,0,0,0.15); /* Slightly deeper shadow */
+    z-index: 1000;
+    display: flex;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
+}
+
+.notice-title {
+    background: black;
+    color: white;
+    width: 50px; /* Figma standard width for side strip */
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 30px 0 0 0; /* Top-left curve only */
+}
+
+.notice-title span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2; /* Vertical letters ke beech clean space */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.crossIcon {
+    cursor: pointer;
+    transition: 0.3s;
+}

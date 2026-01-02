@@ -430,9 +430,11 @@ function initPage() {
 }
 
 
+
+window.onload = initPage;
+
+
 function toggleNoticeBoard() {
     const noticeBoard = document.getElementById("noticeBoard");
     noticeBoard.classList.toggle("expanded");
 }
-
-window.onload = initPage;
