@@ -251,7 +251,7 @@ body {
 }
 
 /* Notice Board Styling */
-.notice-board {
+/* .notice-board {
   position: fixed;
   right: 0;
   top: 120px;
@@ -277,6 +277,78 @@ body {
   align-items: center;
   width: 52px;
 
+} */
+
+
+
+/* Notice Board Base Styling */
+.notice-board {
+    position: fixed;
+    right: -340px; /* Shuru mein sirf black strip dikhegi (400px width - 60px strip) */
+    top: 90px;
+    width: 400px; /* Total width jab khulega */
+    height: 400px;
+    background: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 30px 0 0 30px;
+    box-shadow: -4px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    transition: 0.4s ease; /* Smooth sliding effect */
+}
+
+/* Jab Notice Board khulega */
+.notice-board.expanded {
+    right: 0;
+}
+
+.notice-title {
+    background: black;
+    color: white;
+    width: 60px; /* Width as per your design */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Saari cheezein horizontally center karega */
+    justify-content: flex-start;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 30px 0 0 30px;
+}
+
+/* Close Icon ki alignment */
+.crossIcon {
+    margin-bottom: 15px; /* N aur Icon ke beech gap */
+    display: block;
+}
+
+/* Text letters ki alignment */
+.notice-title span {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Letters ko center line mein layega */
+    font-weight: 500;
+    line-height: 1.5; /* Letters ke beech gap badhane ke liye */
+    letter-spacing: normal;
+}
+
+.notice-content {
+    flex: 1;
+    display: none; /* Default mein chhupa rahega */
+}
+
+.notice-board.expanded .notice-content {
+    display: block; /* Expand hone par dikhega */
+}
+
+.crossIcon {
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* Expand hone par cross icon ko rotate kar sakte hain */
+.notice-board.expanded .crossIcon {
+    transform: rotate(45deg);
 }
 
 .notice-board .crossIcon{
