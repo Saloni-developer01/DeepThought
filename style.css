@@ -106,41 +106,11 @@ body {
   cursor: pointer;
 }
 
-/* Notice Board Styling */
-/* .notice-board {
-  position: fixed;
-  right: 0;
-  top: 120px;
-  width: 84px;
-  height: 400px;
-  background: white;
-  border: 1px solid #cfcfcf;
-  border-radius: 30px 0 0 30px;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  overflow: hidden;
-}
-.notice-title {
-  background: black;
-  color: white;
-  padding: 15px 5px;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 2px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 52px;
-
-} */
-
-/* Notice Board Base Styling */
 .notice-board {
   position: fixed;
-  right: -320px; /* Shuru mein sirf black strip dikhegi (400px width - 60px strip) */
+  right: -320px; 
   top: 90px;
-  width: 400px; /* Total width jab khulega */
+  width: 400px; 
   height: 400px;
   background: white;
   border: 1px solid #d1d1d1;
@@ -148,10 +118,9 @@ body {
   box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
-  transition: 0.4s ease; /* Smooth sliding effect */
+  transition: 0.4s ease; 
 }
 
-/* Jab Notice Board khulega */
 .notice-board.expanded {
   right: 0;
 }
@@ -159,40 +128,38 @@ body {
 .notice-title {
   background: black;
   color: white;
-  width: 60px; /* Width as per your design */
+  width: 60px; 
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Saari cheezein horizontally center karega */
+  align-items: center; 
   justify-content: flex-start;
   padding-top: 20px;
   cursor: pointer;
   border-radius: 30px 0 0 30px;
 }
 
-/* Close Icon ki alignment */
 .crossIcon {
-  margin-bottom: 15px; /* N aur Icon ke beech gap */
+  margin-bottom: 15px;
   display: block;
 }
 
-/* Text letters ki alignment */
 .notice-title span {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Letters ko center line mein layega */
+  align-items: center; 
   font-weight: 500;
-  line-height: 1.5; /* Letters ke beech gap badhane ke liye */
+  line-height: 1.5; 
   letter-spacing: normal;
 }
 
 .notice-content {
   flex: 1;
-  display: none; /* Default mein chhupa rahega */
+  display: none; 
 }
 
 .notice-board.expanded .notice-content {
-  display: block; /* Expand hone par dikhega */
+  display: block; 
 }
 
 .crossIcon {
@@ -200,7 +167,6 @@ body {
   transition: 0.3s;
 }
 
-/* Expand hone par cross icon ko rotate kar sakte hain */
 .notice-board.expanded .crossIcon {
   transform: rotate(45deg);
 }
@@ -210,12 +176,6 @@ body {
   cursor: pointer;
 }
 
-/* .notice-title i {
-  margin-bottom: 20px;
-  cursor: pointer;
-} */
-
-/* Rest of the layout */
 .main-body {
   margin-left: 140px;
   margin-right: 108px;
@@ -232,7 +192,7 @@ body {
   border-radius: 15px;
 
   box-shadow: 0px -8px 4px -4px rgba(0, 0, 0, 0.247),
-    /* Top Shadow (Negative value) */ 0px 8px 6px -4px rgba(0, 0, 0, 0.274); /* Bottom Shadow (Positive value) */
+     0px 8px 6px -4px rgba(0, 0, 0, 0.274); 
   border: 1px solid #ddd;
   overflow: hidden;
   height: 630px;
@@ -258,7 +218,6 @@ body {
   font-size: 16px;
 }
 
-/* Threadbuild & Editor styles */
 textarea,
 input {
   font-family: "Poppins", sans-serif;
@@ -267,7 +226,6 @@ input {
   border-radius: 5px;
 }
 
-/* Floating Icons */
 .floating-icons {
   position: fixed;
   bottom: 30px;
@@ -290,7 +248,6 @@ input {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Sidebar stays same as before... */
 .sidebar-container {
   width: 110px;
   height: 71vh;
@@ -323,37 +280,37 @@ input {
 
 .notice-board {
   position: fixed;
-  right: -340px; /* Hidden state */
+  right: -340px; 
   top: 90px;
   width: 400px;
   height: 450px;
   background: white;
   border: 1px solid #d1d1d1;
   border-radius: 30px 0 0 30px;
-  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.15); 
   z-index: 1000;
   display: flex;
-  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .notice-title {
   background: black;
   color: white;
-  width: 50px; /* Figma standard width for side strip */
+  width: 50px; 
   height: 95.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
   cursor: pointer;
-  border-radius: 30px 0 0 30px; /* Top-left curve only */
+  border-radius: 30px 0 0 30px; 
 }
 
 .notice-title span {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 2; /* Vertical letters ke beech clean space */
+  line-height: 2;
   text-align: center;
   margin-top: 10px;
 }
@@ -382,27 +339,18 @@ input {
   border-radius: 250px;
 }
 
-/* Container ko relative rakho */
 .notification-icon {
   position: relative;
-  /* display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px; 
-    height: 35px;
-    background-color: #3683F0; 
-    border-radius: 50%;
-    color: white; */
+  
 }
 
-/* Red Dot styling */
 .notification-badge {
   position: absolute;
   top: 7px;
   right: 5px;
   width: 7px;
   height: 7px;
-  background-color: #ff2c55; /* Red color */
+  background-color: #ff2c55; 
   border-radius: 50%;
 }
 
